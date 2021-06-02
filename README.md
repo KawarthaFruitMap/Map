@@ -3,7 +3,8 @@ Kawartha Fruit Tree Map
 This map is a project created by Fleming College GIS Students (2021) Korey Hayes, Riley Sweeney and Navjot Kaur Sodhi.
 The project was created for the CKL Poverty Roundtable and Haliburton County.
 
-Using <a target="_blank" href=\"https://leafletjs.com/"> Leaflet</a> JS Library and 
+Using Leaflet JS Library (https://leafletjs.com/), and KoboToolbox (https://www.kobotoolbox.org/) we created an open-source and completely free mapping application. 
+This application allows public users to add edible plant locations located on PUBLIC property to a kobotoolbox form. These locations are actively uploaded to the leaflet map featuring many plugin widgets. 
 
 The benefits of this program will include:
 
