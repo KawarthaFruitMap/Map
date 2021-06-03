@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Leaflet Plugins Test</title>
+	<!-- Responsive -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<!--Leaflet Map-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script> 
+	<script type="text/javascript" src="js/leaflet.ajax.js"></script>
+	<link rel="stylesheet" href="css/stylePlay.css">
+	<link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet/dist/leaflet.css">
+	<!-- Assuming these are for Automation ?-->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/python" src="request.py"></script>
+    <!-- Rain Viewer Resources-->
+	<link rel="stylesheet" type="text/css" href="css/rainviewer.css">
+	<script type="text/javascript" src="js/rain.js"></script>
+    <!--Compass Resources-->
+    <script type="text/javascript" src="js/Compass.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Compass.css">
+    <!-- Search Bar Resources-->
+    <script src="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.js"></script>
+    <link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css">
+	<!--Credit Resources-->
+	<script type="text/javascript" src="js/leaflet-control-credits.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/leaflet-control-credits.css" />
+	<!-- User location Resources-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+
+</head>
+<body>
+
+    <!-- Disclaimer pop-up message START-->
+		<div id="ac-wrapper">
+		<div id="popup">
+			<center>
+				<h2>Read Disclaimer and Accept</h2>
+				<h4>to access map.</h4>
+				<p>The data on this map is populated by the PUBLIC for the PUBLIC. The use
+					of this application for consumption of edible plants is AT YOUR OWN RISK. 
+					The creators and/or hosts of this map, and the data, shall not be held responsible for 
+					any incorrect identification of species or incorrect information. It is ultimately your responsibility
+					as the user of this map to determine whether a fruit should be harvested and/or ingested.
+					Please keep in mind this map will display points on PUBLIC property ONLY. This map is intended to be used
+					for public access ONLY. Any trees that may seem to be on private property should not be harvested
+					without direct permission from the landowner or you could face consequences that the creators/hosts
+					of this map and data shall not be liable for.
+				</p>
+				<input type="submit" name="submit" value="Accept" onClick="PopUp('hide')" />
+			</center>
+		</div>
+	</div>
+    <!-- Disclaimer pop-up message END-->
+
+ 
+
+    <!-- Map div block-->
+<div id="mapid"></div>
+    <!-- Script for Disclaimer Message START-->
+<script type="text/javascript">
+	function PopUp(hideOrshow) {
+		if (hideOrshow == 'show') document.getElementById('ac-wrapper');
+		else document.getElementById('ac-wrapper').style.display = "none";
+	}
+	
+	</script>
+    <!-- Script for Disclaimer Message END-->
+<script>
+    // Creating Leaflet Map START
+    //Set Map initial view
+	var mymap = L.map('mapid').setView([44.3, -78.5], 9);
+    //Adding basemap tiles 
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+    // Creating Leaflet Map END
+
+    //Adding credit Fleming Logo to bottom corner
+		L.controlCredits({
+				image: "image/FlemingGIS.png",
+				link: "https://flemingcollege.ca/programs/geographic-information-systems-applications-specialist",
+				text: "Fleming College<br/>GIS Students"
+			}).addTo(mymap);
+	
+    // Javascript for user current location
+	L.control.locate().addTo(mymap);
+
+    // AJAX method of adding Geojson points from file, with pop-ups 
+    //pop-ups display: Species name, Other name, Comments, Images and a link to resources pages
+	var geojsonLayer = new L.GeoJSON.AJAX("Kobo/geoJSON.geojson", {
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup('<b><center> Species:' + feature.properties.Species + '<br> Species Name if Other: ' + feature.properties.OtherTreeName +
+			'<br> Comments: ' + feature.properties.Comments + '<br>' + 
+			'<img src= "https://kc.humanitarianresponse.info/media/original?media_file=rilsween%2Fattachments%2F'+ 
+			feature.properties.Upload_or_take_a_pho_of_the_edible_plant + '"' +' style="width:200px;height:200px;">' + '<br>' + 'Click' +
+			'<a target="_blank" href=\"https://rileysweeneyfleming.github.io/CollabWebPage/index.html' + '"> HERE</a>' + ' for plant info, recipes and harvesting info'); 
+// 				
+	//Add points and pop-ups to map			
+  }});
+	geojsonLayer.addTo(mymap);
+
+	
+	//Search Bar START
+    // Will open most recent point added with selected species name
+	var controlSearch = new L.Control.Search({
+		position:'topright',
+		propertyName: 'Species',		
+		layer: geojsonLayer,
+		initial: false,
+		zoom: 12,
+		marker: false,
+		circleLocation: false
+	});
+
+	controlSearch.on('search:locationfound', function(e) {
+	if(e.layer._popup)
+		e.layer.openPopup();
+	});
+
+	mymap.addControl( controlSearch );
+
+	//Search Bar END
+
+    // Click on Map pop-up START
+	var popup = L.popup();
+    //Pop-up will display link to data collection form when user clicks the map
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("<h3>Would you like to add a tree?<h3>" + 
+				"</br><a href=\"https://ee.humanitarianresponse.info/x/WEESKP4c\">Submission Form</a>")   //This here is just the onclick popup for anywhere on the map
+			.openOn(mymap);
+	}
+
+	mymap.on('click', onMapClick);
+    // Click on Map pop-up END
+
+    // Rain viewer widget START
+	var rainviewer = L.control.rainviewer({
+			position: 'topleft',
+			nextButtonText: '>',
+			playStopButtonText: 'Start/Stop',
+			prevButtonText: '<',
+			positionSliderLabelText: "Time:",
+			opacitySliderLabelText: "Opacity:",
+			animationInterval: 500,
+			opacity: 0.3
+		});
+		rainviewer.addTo(mymap);
+    // Rain viewer widget END
+	
+
+	
+    // Compass widget script START
+	var comp = new L.Control.Compass({autoActive: true, showDigit:true});
+
+	mymap.addControl(comp);
+    // Compass widget script END
+
+</script>
+</body>
+<script src="koreystuff/js.js"></script>
+</html>
