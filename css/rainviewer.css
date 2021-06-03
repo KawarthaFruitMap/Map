@@ -63,7 +63,7 @@
 }
 
 .leaflet-control-rainviewer a.leaflet-control-rainviewer-button {
-    background: #fff url(..image/rain.png) no-repeat 0 0;
+    background: #fff url(../image/rain.png) no-repeat 0 0;
     background-size: 26px 26px;
 }
 
@@ -74,6 +74,6 @@
 @media (-webkit-min-device-pixel-ratio:2),
 (min-resolution:192dpi) {
     .leaflet-control-rainviewer a {
-        background-image: url(..image/rain.png);
+        background-image: url(../image/rain.png);
     }
 }
