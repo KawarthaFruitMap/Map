@@ -3,7 +3,7 @@
 <head>
 	<title>Kawartha Fruit Tree Map</title>
 	<!-- Tab Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="https://kawarthafruitmap.github.io/Map/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<!-- Responsive -->
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -30,6 +30,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 </head>
 <body>
+	<!-- Page Loader -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+
+	</div>
     <!-- Disclaimer pop-up message START-->
 		<div id="ac-wrapper">
 		<div id="popup">
@@ -51,6 +59,7 @@
 		</div>
 	</div>
     <!-- Disclaimer pop-up message END-->
+
     <!-- Map div block-->
 <div id="mapid"></div>
 </body>
