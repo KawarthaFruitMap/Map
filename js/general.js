@@ -1,11 +1,14 @@
 // <!-- Script for Disclaimer Message START-->
 
-	function PopUp(hideOrshow) {
-		if (hideOrshow == 'show') document.getElementById('ac-wrapper');
-		else document.getElementById('ac-wrapper').style.display = "none";
-	}
-	
-
+function PopUp(hideOrshow) {
+	if (hideOrshow == 'show') document.getElementById('ac-wrapper');
+	else  document.getElementById('ac-wrapper').style.display = "none";}
+	  
+	// window.onload = function () {
+	// 	setTimeout(function () {
+	// 		PopUp('show');
+	// 	}, 5000);
+	// }
     // <!-- Script for Disclaimer Message END-->
 
     // Creating Leaflet Map START
