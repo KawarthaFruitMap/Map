@@ -1,7 +1,6 @@
 Kawartha Fruit Tree Map 
 
-This map is a project created by Fleming College GIS Students (2021) Korey Hayes, Riley Sweeney and Navjot Kaur Sodhi.
-The project was created for the CKL Poverty Roundtable and Haliburton County.
+This map is a project created by Fleming College GIS Students (2021) Korey Hayes, Riley Sweeney and Navjot Kaur Sodhi. The project was created for the Kawartha Lakes and Haliburton Communities.
 
 Using Leaflet JS Library (https://leafletjs.com/), and KoboToolbox (https://www.kobotoolbox.org/) we created an open-source and completely free mapping application. 
 This application allows public users to add edible plant locations located on PUBLIC property to a kobotoolbox form. These locations are actively uploaded to the leaflet map featuring many plugin widgets. 
@@ -33,3 +32,6 @@ Building Community
 -increase social inclusion/ increasing participant health by engaging with others and connecting with neighbours through hands on effective community action.
 
 -increase public awareness that our local food banks accept healthy fruit and veg through locally established programs.
+
+Partnerships include The City of Kawartha Lakes, City of Kawartha Lakes and Haliburton Poverty Reduction Roundtable and the Kawartha Lakes Food Coalition Food Security Working Group 
+
