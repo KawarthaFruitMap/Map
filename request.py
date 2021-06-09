@@ -12,7 +12,7 @@ headers = {
 }
 
 response = requests.request('GET', url, headers=headers, data=payload)
-myfile = open(r"validation\kobo.geojson", "w")
+myfile = open(r"GeoJSON\kobo.geojson", "w")
 myfile.write(response.text)
 myfile.close()
 print("done")
@@ -20,9 +20,9 @@ print("done")
 
 #########################################################################
 badtrees = ["garbage", "Garbage", "Dumpster", "dumpster", "Buckthorn", "Buck Thorn", "Oak", "buckthorn", "buck thorn", "poison", "Poison", "Sumac", "sumac", "Blue Beech", "blue beech"]
-geoPoints = open(r"validation\kobo.geojson.geojson", "r")
-criteriaPoints = open(r"validation\polygon.geojson", "r")
-regionPoints = open(r"validation\polygonMinusWater.geojson", "r")
+geoPoints = open(r"GeoJSON\kobo.geojson.geojson", "r")
+criteriaPoints = open(r"GeoJSON\polygon.geojson", "r")
+regionPoints = open(r"GeoJSON\polygonMinusWater.geojson", "r")
 geodict = json.load(geoPoints)
 criteriadict = json.load(criteriaPoints)
 regiondict = json.load(regionPoints)
