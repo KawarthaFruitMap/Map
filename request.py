@@ -20,7 +20,7 @@ print("done")
 
 #########################################################################
 badtrees = ["garbage", "Garbage", "Dumpster", "dumpster", "Buckthorn", "Buck Thorn", "Oak", "buckthorn", "buck thorn", "poison", "Poison", "Sumac", "sumac", "Blue Beech", "blue beech"]
-geoPoints = open(r"GeoJSON\kobo.geojson.geojson", "r")
+geoPoints = open(r"GeoJSON\kobo.geojson", "r")
 criteriaPoints = open(r"GeoJSON\polygon.geojson", "r")
 regionPoints = open(r"GeoJSON\polygonMinusWater.geojson", "r")
 geodict = json.load(geoPoints)
