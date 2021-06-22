@@ -766,7 +766,7 @@ function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
         .setContent("<h6>Would you like to add a tree?<h6>" + 
-            "</br><a href=\"https://ee.humanitarianresponse.info/single/m7ft93Qv?returnUrl=https://rileysweeneyfleming.github.io/CollabWebPage/fruittreemap.html\">Submission Form</a>")   //This here is just the onclick popup for anywhere on the map
+            "</br><a href=\"https://ee.humanitarianresponse.info/single/m7ft93Qv?returnUrl=https://kawarthafruitmap.github.io/Map/fruittreemap.html\">Submission Form</a>")   //This here is just the onclick popup for anywhere on the map
         .openOn(mymap);
 }
 
