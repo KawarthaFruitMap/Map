@@ -1,0 +1,348 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto',zsans-serif;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  width:100%;
+}
+
+li {
+    list-style: none;
+    z-index: 10000;
+
+}
+
+a {
+    text-decoration: none;
+    z-index: 10000;
+}
+
+.header{
+  border-top:1px solid black;
+  border-bottom: 1px solid #000;
+  z-index: 10000;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10000;
+  background-color: #4e6d26;
+
+
+}
+.hamburger {
+  display: none;
+  z-index: 10000;
+
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 10000;
+  background-color: black;
+
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  background-color: #4e6d26;
+
+}
+
+.nav-item {
+  margin-left: 1rem;
+  z-index: 10000;
+  float:right;
+
+}
+
+.active{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  z-index: 10000;
+  text-transform: uppercase;
+}
+.active:hover{
+  font-weight:bold;
+}
+
+.nav-link{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  z-index: 10000;
+  display:block;
+  text-align: center;
+  float:right;
+  padding:10px;
+}
+
+
+.nav-link:hover{
+  color: #fff;
+  z-index: 10000;
+  background-color: #9dcc60;
+  font-weight: bold;
+
+}
+.active-logo{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  background: #4e6d26;
+  text-transform: uppercase;
+}
+.nav-logo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+}
+.nav-logo:hover{
+  font-weight:bold;
+}
+.active-logo:hover{
+  background-color: #9dcc60;
+  font-weight: bold;
+} */
+
+
+#ac-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.6);
+  z-index: 100001;
+}
+
+#popup {
+  width: 50%;
+  height: 50%;
+  background: #FFFFFF;
+  border: 5px solid #000;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  box-shadow: #64686e 0px 0px 3px 3px;
+  -moz-box-shadow: #64686e 0px 0px 3px 3px;
+  -webkit-box-shadow: #64686e 0px 0px 3px 3px;
+  position: relative;
+  top: 25%; left: 25%;
+  overflow:auto;
+  font-size:12pt;
+}
+
+/* body,h1,h2,h3,h4,h5,h6, header, footer {font-family: "Lato", sans-serif} */
+
+#mapid {
+  height: 80%;
+  width: 100%;
+  z-index:auto;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* .footer {
+  width: 67%;
+  float:right;
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}*/
+/* .flemLogo{height:100%;} */
+
+/* a {
+color: white;
+text-decoration: none;
+font-weight:bold;
+}
+a:hover {
+font-weight:bold;
+} */
+
+/***************** 
+* Owner : Korey Hayes
+* Date  : Nov 24 (v1)
+* From  : https://programminghub.io/coursedetail/programming/learn/CSS/
+* the tag names li, li a and ul are from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+******************/
+/* set classes and tags to have full window width for mobile/small window viewing */
+/* .top{width:100%;
+background-color: #4e6d26;
+max-height: 200px;
+overflow: hidden;
+} */
+
+/* we had decided as a group that the top of our page should have
+a background to make sure that the photo placement is seamless */
+/* .bottom{background-color: #777;
+display: table;
+clear: both;
+border-bottom:1px solid #000;
+width:100%;
+}
+.sect{margin-top:20px;}
+.sect:after {
+content: "";            
+display: table;         
+clear: both;            
+overflow:hidden
+} 
+aside {
+float: left;
+} */
+/* This header was designed  to use my Mattawa River photo
+to coincide with the Fleming College Logo */
+/* header{
+  width:67%;
+font-size: 50px;
+float: right;
+text-align:right;
+background-color: #4e6d26;
+}
+
+.columnk1{ float: left;
+  width: 59%;
+  }
+  .columnk2{ float: right;
+  width: 40%
+  }
+  .columnk3{ float: right;
+  width: 59%
+  }
+  .columnk4{ float: left;
+  width: 40%;
+  } */
+  /* article { width: 60%;} */
+  /* article{width:60%;}
+  aside { width: 30%;}
+  header{width: 67%;
+  float:right;}
+  .image{
+    width:100%;} */
+
+/* End of Mobile Formatting */
+/* .like,
+.dislike {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background: lightgreen;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+}
+.qty1,
+.qty2 {
+    border: none;
+    width:20px;
+    background: transparent;
+} */
+/* Beginning of Computer Monitor Formatting */
+/* @media only screen and (max-width: 768px) {
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 1rem;
+      flex-direction: column;
+      background-color: #4e6d26;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+      z-index: 10000;
+  }
+
+  .nav-menu.active {
+      left: 0;
+      z-index: 10000;
+
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+      z-index: 10000;
+
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      z-index: 10000;
+
+  } */
+  /* // Inside the Media Query. */
+/* 
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+  z-index: 10000;
+
+}
+
+.hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+  z-index: 10000;
+
+} */
+
+/* .hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+  z-index: 10000;
+
+} */
+/***************** 
+* Owner : Korey Hayes
+* Date  : Nov 24 (v1)
+* From  : https://programminghub.io/coursedetail/programming/learn/CSS/
+* the tag names li, li a and ul are from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+******************/
+/* .columnk1,  .columnk2, .columnk3, .columnk4, article, .image, .bottom, 
+header, aside, nav, li, a, .box, .imgcolumn1, .imgcolumn3, .top, .footer{ 
+width: 100%; 
+} */
+
+/* End of Computer Monitor Formatting */
+/* }
+
+.subheader {
+  font-size: large;
+  font-weight: bold;
+  color: rgb(7, 80, 7);
+} */
