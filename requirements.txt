@@ -1,4 +1,0 @@
-geojson
-shapely
-requests
-jsonschema
