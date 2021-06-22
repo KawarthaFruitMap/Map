@@ -1,0 +1,2 @@
+polygon.geojson filter=lfs diff=lfs merge=lfs -text
+polygonMinusWater.geojson filter=lfs diff=lfs merge=lfs -text

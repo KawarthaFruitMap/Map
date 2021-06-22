@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <title>Kawartha Fruit Tree Map</title>
+    <!-- Responsive -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Tab Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Template Resources -->
+    <link rel="stylesheet" type="text/css" href="css/templatemo-style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Modified CSS -->
+    <link rel="stylesheet" href="css/korey.css">
+	<!--Leaflet Map-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script> 
+	<!-- <link rel="stylesheet" href="css/stylePlay.css"> -->
+	<link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet/dist/leaflet.css">
+	<script type="text/javascript" src="js\leaflet.ajax.js"></script> <!-- Needed -->
+    <!-- Rain Viewer Resources-->
+	<link rel="stylesheet" type="text/css" href="css/rainviewer.css">
+	<script type="text/javascript" src="js/rain.js"></script>
+    <!--Compass Resources-->
+    <script type="text/javascript" src="js/Compass.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Compass.css">
+    <!-- Search Bar Resources-->
+    <script src="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.js"></script>
+    <link rel="stylesheet" href="https://labs.easyblog.it/maps/leaflet-search/src/leaflet-search.css">     
+    <!--Credit Resources-->
+	<script type="text/javascript" src="js/leaflet-control-credits.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/leaflet-control-credits.css" />
+	<!-- User location Resources-->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+    <!--Bootstrap Navbar-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/korey.css">
+
+<!--TemplateMo 556 Catalog-Z https://templatemo.com/tm-556-catalog-z-->
+</head>
+<body style="height: 100%;">
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    
+    <!-- NEW NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+             <a class="navbar-brand" href="index.html">Kawartha Fruit Tree Map</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+         <div class="collapse navbar-collapse" id="main_nav">
+       
+           <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a class="nav-link" href="fruittreemap.html"> Map </a></li>
+               <li class="nav-item"><a class="nav-link active" href="Form.html">Data Collection</a></li>
+               <li class="nav-item"><a class="nav-link" href="Guide.html"> User Guide </a></li>
+               <li class="nav-item"><a class="nav-link" href="Dev.html">Development Process</a></li>
+               <li class="nav-item dropdown">
+                   <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">Plant Resources</a>
+                   <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a class="dropdown-item" href="plantlist.html"> Plant List</a></li>
+                     <li><a class="dropdown-item" href="videos.html"> Recipes</a></li>
+                     <li><a class="dropdown-item" href="about.html"> Plant Information</a></li>
+                     <li><a class="dropdown-item" href="contact.html"> Harvest Information</a></li>
+                   </ul>
+               </li>
+           </ul>
+       
+         </div> <!-- navbar-collapse.// -->
+        </div> <!-- container-fluid.// -->
+       </nav>
+<!--KoboToolbox START-->
+<body>
+    <div class="box">
+        <iframe src="https://ee.humanitarianresponse.info/m7ft93Qv" width="100%" height="100%" frameborder="1" allowfullscreen allow="geolocation"></iframe>
+</div>
+<!--KoboToolbox END-->
+    <footer>
+        <p style="height: 15; font-size: xx-small;">
+            Copyright 2020 Catalog-Z Company. All rights reserved.<br>
+            Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored" target="_parent">TemplateMo</a>
+        </p>
+</footer>
+<script src="js/plugins.js"></script>
+<script src="js/map.js"></script>
+<script>
+    $(window).on("load", function() {
+        $('body').addClass('loaded');
+    });
+</script>
+</body>
+</html>
